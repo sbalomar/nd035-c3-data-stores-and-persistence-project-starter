@@ -11,7 +11,6 @@ public class Customer {
     @Id
     @GeneratedValue
     private Long id;
-    @Nationalized
     private String name;
     private String phoneNumber;
     @OneToMany(mappedBy = "owner")

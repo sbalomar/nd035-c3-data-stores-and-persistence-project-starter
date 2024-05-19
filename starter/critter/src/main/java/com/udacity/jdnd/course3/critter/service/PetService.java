@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -29,11 +30,14 @@ public class PetService {
         Pet addedPet = petRepository.save(pet);
         Customer owner = addedPet.getOwner();
         List<Pet> petsOwner = owner.getPets();
+
         if(petsOwner == null)
             petsOwner = new ArrayList<>();
+
         petsOwner.add(addedPet);
         owner.setPets(petsOwner);
         customerRepository.save(owner);
+
         return addedPet;
     }
 
@@ -48,4 +52,14 @@ public class PetService {
         return petRepository.findByOwnerId(ownerId);
     }
 
+    public List<Pet> mapIdsToPets(List<Long> petIds){
+        if(petIds == null)
+            return null;
+        return petRepository.findAllById(petIds);
+    }
+    public List<Long> mapPetsToIds(List<Pet> pets){
+        if(pets == null)
+            return null;
+        return pets.stream().map(Pet::getId).collect(Collectors.toList());
+    }
 }

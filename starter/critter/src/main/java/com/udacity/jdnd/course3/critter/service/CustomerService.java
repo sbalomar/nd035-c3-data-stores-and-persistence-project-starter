@@ -28,7 +28,10 @@ public class CustomerService {
     public Customer getOwnerByPet(long petId){
         return customerRepository.findByPetsId(petId);
     }
+    public Customer mapIdToCustomer(Long ownerId){
+        return customerRepository.findById(ownerId).orElse(null);
 
+    }
 
     }
 

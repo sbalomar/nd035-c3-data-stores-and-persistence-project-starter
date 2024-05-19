@@ -1,6 +1,6 @@
 package com.udacity.jdnd.course3.critter.entity;
 
-import com.udacity.jdnd.course3.critter.dto.PetType;
+import com.udacity.jdnd.course3.critter.enums.PetType;
 import org.hibernate.annotations.Nationalized;
 
 import javax.persistence.*;
@@ -16,7 +16,6 @@ public class Pet {
     private Customer owner;
     @Enumerated(EnumType.STRING)
     private PetType type;
-    @Nationalized
     private String name;
     private LocalDate birthDate;
     @Column(length = 400)

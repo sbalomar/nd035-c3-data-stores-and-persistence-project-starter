@@ -40,4 +40,15 @@ public class EmployeeService {
     public List<Employee> findEmployeesForService(EmployeeRequestDTO employeeDTO) {
         List<Employee> employees = employeeRepository.findDistinctBySkillsInAndDaysAvailableIn(employeeDTO.getSkills(), Collections.singleton(employeeDTO.getDate().getDayOfWeek()));
         return employees.stream().filter(employee -> employee.getSkills().containsAll(employeeDTO.getSkills())).collect(Collectors.toList());    }
+
+    public List<Employee> mapIdsToEmployees(List<Long> employeeIds){
+        if(employeeIds == null)
+            return null;
+        return employeeRepository.findAllById(employeeIds);
+    }
+    public List<Long> mapEmployeesToIds(List<Employee> employees){
+        if(employees == null)
+            return null;
+        return employees.stream().map(Employee::getId).collect(Collectors.toList());
+    }
 }

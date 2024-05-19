@@ -1,6 +1,6 @@
 package com.udacity.jdnd.course3.critter.entity;
 
-import com.udacity.jdnd.course3.critter.dto.EmployeeSkill;
+import com.udacity.jdnd.course3.critter.enums.EmployeeSkill;
 import org.hibernate.annotations.Nationalized;
 
 import javax.persistence.*;
@@ -13,7 +13,6 @@ public class Employee {
     @Id
     @GeneratedValue
     private Long id;
-    @Nationalized
     private String name;
 
     @ElementCollection
