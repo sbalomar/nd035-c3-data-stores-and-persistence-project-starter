@@ -42,7 +42,7 @@ public class PetService {
     }
 
     public Pet getPet(long petId) {
-       return petRepository.findById(petId).orElseThrow(()-> new RuntimeException("Not found"));
+       return petRepository.findById(petId).orElse(null);
     }
     public List<Pet> getPets(){
         return petRepository.findAll();

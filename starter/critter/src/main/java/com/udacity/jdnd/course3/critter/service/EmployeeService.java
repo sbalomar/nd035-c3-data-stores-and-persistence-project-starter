@@ -32,9 +32,11 @@ public class EmployeeService {
     }
 
     public void setAvailability(Set<DayOfWeek> daysAvailable, long employeeId) {
-        Employee employee = employeeRepository.findById(employeeId).orElseThrow(()->new RuntimeException("Not found"));
-        employee.setDaysAvailable(daysAvailable);
-        employeeRepository.save(employee);
+        Employee employee = employeeRepository.findById(employeeId).orElse(null);
+        if(employee!=null) {
+            employee.setDaysAvailable(daysAvailable);
+            employeeRepository.save(employee);
+        }
     }
 
     public List<Employee> findEmployeesForService(EmployeeRequestDTO employeeDTO) {
