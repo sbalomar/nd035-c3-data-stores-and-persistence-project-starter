@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "f4816fec-3f92-4761-a38e-375976e85eaf",
+		"_postman_id": "59cbefa0-3311-4ad3-a83f-73d9022fa036",
 		"name": "Udacity",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "28520550"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28554486"
 	},
 	"item": [
 		{
@@ -27,18 +27,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/user/customer",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"user",
-						"customer"
-					]
-				}
+				"url": "http://localhost:8082/user/customer"
 			},
 			"response": []
 		},
@@ -63,17 +52,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/pet",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"pet"
-					]
-				}
+				"url": "http://localhost:8082/pet"
 			},
 			"response": []
 		},
@@ -98,18 +77,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/user/employee",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"user",
-						"employee"
-					]
-				}
+				"url": "http://localhost:8082/user/employee"
 			},
 			"response": []
 		},
@@ -134,19 +102,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/user/employee/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"user",
-						"employee",
-						"1"
-					]
-				}
+				"url": "http://localhost:8082/user/employee/3"
 			},
 			"response": []
 		},
@@ -174,19 +130,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/user/employee/availability",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"user",
-						"employee",
-						"availability"
-					]
-				}
+				"url": "http://localhost:8082/user/employee/availability"
 			},
 			"response": []
 		},
@@ -204,24 +148,14 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"employeeIds\": [2],\r\n    \"petIds\": [4],\r\n    \"date\": \"2024-05-18\",\r\n    \"activities\": [\"WALKING\", \"FEEDING\"]\r\n}",
+					"raw": "{\r\n    \"employeeIds\": [3],\r\n    \"petIds\": [2],\r\n    \"date\": \"2024-05-18\",\r\n    \"activities\": [\"WALKING\", \"FEEDING\"]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/schedule",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"schedule"
-					]
-				}
+				"url": "http://localhost:8082/schedule"
 			},
 			"response": []
 		},
@@ -249,19 +183,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/schedule/pet/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"schedule",
-						"pet",
-						"1"
-					]
-				}
+				"url": "http://localhost:8082/schedule/pet/2"
 			},
 			"response": []
 		},
@@ -289,19 +211,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/schedule/employee/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"schedule",
-						"employee",
-						"2"
-					]
-				}
+				"url": "http://localhost:8082/schedule/employee/3"
 			},
 			"response": []
 		},
@@ -329,19 +239,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/schedule/customer/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"schedule",
-						"customer",
-						"2"
-					]
-				}
+				"url": "http://localhost:8082/schedule/customer/1"
 			},
 			"response": []
 		},
@@ -369,18 +267,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/user/customer",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"user",
-						"customer"
-					]
-				}
+				"url": "http://localhost:8082/user/customer"
 			},
 			"response": []
 		},
@@ -408,17 +295,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/pet",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"pet"
-					]
-				}
+				"url": "http://localhost:8082/pet"
 			},
 			"response": []
 		},
@@ -446,19 +323,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/pet/owner/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"pet",
-						"owner",
-						"1"
-					]
-				}
+				"url": "http://localhost:8082/pet/owner/1"
 			},
 			"response": []
 		},
@@ -486,20 +351,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8082/user/customer/pet/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"user",
-						"customer",
-						"pet",
-						"1"
-					]
-				}
+				"url": "http://localhost:8082/user/customer/pet/2"
 			},
 			"response": []
 		}
